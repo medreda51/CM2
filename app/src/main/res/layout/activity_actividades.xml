@@ -66,7 +66,7 @@
                             android:layout_below="@+id/chronometerBici"
                             android:hint="0.0 km"
                             android:layout_marginTop="60dp"
-                            android:textSize="30dp"
+                            android:textSize="20dp"
                             android:textColorHint="#000000"
                             android:layout_marginLeft="35dp"
                             android:textStyle="bold" />
@@ -74,13 +74,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="0.0 km/h"
+                            android:hint="0.0 nº kg CO2"
                             android:id="@+id/text_km_h1"
                             android:textStyle="bold"
                             android:layout_alignTop="@+id/text_km1"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentEnd="true"
-                            android:textSize="30dp"
+                            android:textSize="20dp"
                             android:textColorHint="#000000"
                             android:layout_marginRight="35dp" />
 
@@ -168,7 +168,7 @@
                             android:layout_below="@+id/chronometerCorrer"
                             android:hint="0.0 km"
                             android:layout_marginTop="60dp"
-                            android:textSize="30dp"
+                            android:textSize="20dp"
                             android:textColorHint="#000000"
                             android:layout_marginLeft="35dp"
                             android:textStyle="bold" />
@@ -176,13 +176,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="0.0 km/h"
+                            android:hint="0.0 nº kg CO2"
                             android:id="@+id/text_km_h2"
                             android:textStyle="bold"
                             android:layout_alignTop="@+id/text_km2"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentEnd="true"
-                            android:textSize="30dp"
+                            android:textSize="20dp"
                             android:textColorHint="#000000"
                             android:layout_marginRight="35dp" />
 
