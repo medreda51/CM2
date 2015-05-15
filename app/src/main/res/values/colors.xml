@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color><!-- #03A9F4 #FFB74D #395B2D-->
+    <color name="colorPrimaryDark">#1A237E</color> <!--#0288D1 #FF9800 #33691E #009688 #9FBE37-->
+    <color name="colorPrimaryLight">#B3E5FC</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <color name="colorHighlight">#B6B6B6</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <!-- Background's color -->
+    <color name="backgroundColor1">#B2DFDB</color>
+    <color name="backgroundColor2">#00BCD4</color>
+    <color name="backgroundColor3">#6699FF</color>
+
+    <!-- El mismo fondo que el de la plataforma web -->
+    <color name="backgroundPlataformaWeb">#E5E3DF</color>
+
+
+    <!-- Buttons' color -->
+    <color name="colorButtonPressed1">#1A237E</color>
+    <color name="colorButtonPressed2">#004D40</color>
+    <color name="colorButtonPressed3">#395B2D</color>
+    <color name="colorButtonPressed4">#4C6C32</color>
+    <color name="colorButtonPressed5">#476A33</color>
+
+    <!-- color del button no presionado tiene que ser el mismo que el color de primary dark-->
+    <color name="colorButtonNoPressed">#3F51B5</color>
+
+
+    <!-- Personalizar el texto de la barra del menu -->
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecondary">#FFFFFF</color>
+
+
+
+</resources>
