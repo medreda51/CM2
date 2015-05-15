@@ -1,10 +1,9 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="com.example.mohamedreda.materialdesign.SubActivity">
+    tools:context="com.example.mohamedreda.ciclogreen.Actividades"
+    android:background="@color/backgroundPlataformaWeb">
 
 
     <!-- Incluir la barra de herramientas a este nuevo layout -->
@@ -12,11 +11,10 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar"/>
 
-
     <TabHost android:id="@android:id/tabhost"
-        android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar">
 
         <LinearLayout
             android:orientation="vertical"
@@ -33,118 +31,218 @@
                 android:layout_height="match_parent"
                 android:id="@android:id/tabcontent" >
 
-                <LinearLayout android:id="@+id/tab1"
+
+
+
+                <!-- TAB 1 -->
+                <RelativeLayout android:id="@+id/tab1"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Chronometer
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/chronometer"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="30sp"
-                        android:layout_marginRight="100dp"
-                        android:textColor="@color/colorPrimaryDark"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="km"
-                        android:id="@+id/textView"
-                        android:textSize="30sp"
-                        android:layout_gravity="right"
-                        android:layout_marginTop="-40dp"
-                        android:layout_marginRight="60dp"
-                        android:textColor="@color/colorPrimaryDark"/>
 
 
-                    <Button
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:text="INICIO"
-                        android:id="@+id/button_inicio"
-                        android:paddingLeft="80dp"
-                        android:paddingRight="80dp"
-                        android:textSize="20dp"
-                        android:background="@drawable/selection"
-                        android:textColor="@color/colorWhite"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="200dp" />
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="220dp"
+                        android:orientation="vertical"
+                        android:id="@+id/linear_superior"
+                        android:gravity="center">
 
-                    <Button
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:text="FIN"
-                        android:id="@+id/button_fin"
-                        android:textSize="20dp"
-                        android:background="@drawable/selection"
-                        android:textColor="@color/colorWhite"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="30dp"/>
-                </LinearLayout>
+                        <Chronometer
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/chronometerBici"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="70sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_km1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/chronometerBici"
+                            android:hint="0.0 km"
+                            android:layout_marginTop="60dp"
+                            android:textSize="30dp"
+                            android:textColorHint="#000000"
+                            android:layout_marginLeft="35dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="0.0 km/h"
+                            android:id="@+id/text_km_h1"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/text_km1"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:textSize="30dp"
+                            android:textColorHint="#000000"
+                            android:layout_marginRight="35dp" />
 
 
 
-                <LinearLayout android:id="@+id/tab2"
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/linear_superior"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/button_inicio1"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:text="INICIO"
+                            android:layout_below="@+id/text_km_h2"
+                            android:textSize="20dp"
+                            android:background="@drawable/selection"
+                            android:onClick="chronometerBici"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            />
+
+                        <Button
+                            android:id="@+id/button_fin1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="FIN"
+
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:textSize="20dp"
+                            android:background="@drawable/selection"
+                            android:onClick="chronometerBici"
+                            android:layout_below="@+id/button_inicio2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <!-- ********************** FIN TAB1 **********************************-->
+
+
+                <!--********************** INICIO TAB2 ***************************-->
+                <RelativeLayout
+                    android:id="@+id/tab2"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
 
-                    <Chronometer
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/chronometer2"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="30sp"
-                        android:layout_marginRight="100dp"
-                        android:textColor="@color/colorPrimaryDark"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="km"
-                        android:id="@+id/textView2"
-                        android:textSize="30sp"
-                        android:layout_gravity="right"
-                        android:layout_marginTop="-40dp"
-                        android:layout_marginRight="60dp"
-                        android:textColor="@color/colorPrimaryDark"/>
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="220dp"
+                        android:orientation="vertical"
+                        android:id="@+id/linear_superior2"
+                        android:gravity="center">
 
+                        <Chronometer
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/chronometerCorrer"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="70sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:textStyle="bold" />
 
-                    <Button
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:text="INICIO"
-                        android:id="@+id/button_inicio2"
-                        android:paddingLeft="80dp"
-                        android:paddingRight="80dp"
-                        android:textSize="20dp"
-                        android:background="@drawable/selection"
-                        android:textColor="@color/colorWhite"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="200dp" />
+                        <TextView
+                            android:id="@+id/text_km2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/chronometerCorrer"
+                            android:hint="0.0 km"
+                            android:layout_marginTop="60dp"
+                            android:textSize="30dp"
+                            android:textColorHint="#000000"
+                            android:layout_marginLeft="35dp"
+                            android:textStyle="bold" />
 
-                    <Button
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:text="FIN"
-                        android:id="@+id/button_fin2"
-                        android:textSize="20dp"
-                        android:background="@drawable/selection"
-                        android:textColor="@color/colorWhite"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="0.0 km/h"
+                            android:id="@+id/text_km_h2"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/text_km2"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:textSize="30dp"
+                            android:textColorHint="#000000"
+                            android:layout_marginRight="35dp" />
 
 
-                </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/linear_superior2"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/button_inicio2"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:text="INICIO"
+                            android:layout_below="@+id/text_km_h2"
+                            android:textSize="20dp"
+                            android:background="@drawable/selection"
+                            android:onClick="chronometerCorrer"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp" />
+
+                        <Button
+                            android:id="@+id/button_fin2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="FIN"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:textSize="20dp"
+                            android:background="@drawable/selection"
+                            android:onClick="chronometerCorrer"
+                            android:layout_below="@+id/button_inicio2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- fin TAB2 -->
+
+
             </FrameLayout>
         </LinearLayout>
     </TabHost>
 
 
 
-</RelativeLayout>
 
+
+
+</RelativeLayout>
